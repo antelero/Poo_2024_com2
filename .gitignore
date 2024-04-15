@@ -52,3 +52,15 @@ compile_commands.json
 *creator.user*
 
 *_qmlcache.qrc
+
+# MinGW generated files
+*.Debug
+*.Release
+
+# Python byte code
+*.pyc
+
+# Binaries
+# --------
+*.dll
+*.exe
