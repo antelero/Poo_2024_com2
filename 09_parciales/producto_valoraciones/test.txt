@@ -1,0 +1,10 @@
+Notebook Lenovo
+-Muy buena : 5
+-Es muy cara : 1
+--Es la más barata si la comparas con otras marcas : 5
+-No es lo que esperaba, pero estoy satisfecho : 3
+Notebook hp
+-Muy bastante buena : 4
+-No es muy cara : 3
+--Buena relacion costo beneficio : 5
+-Estoy satisfecho : 4
