@@ -1,17 +1,13 @@
 #include "envioxpeso.h"
 
-EnvioXPeso::EnvioXPeso(char * codigo, double montoFijo, double peso): Envio(codigo, montoFijo)
+EnvioXPeso::EnvioXPeso(char * codigo, double montoFijo, double peso): EnvioComun(codigo, montoFijo)
 {
     this->peso = peso;
 }
 
-double EnvioXPeso::getMonto()
+double EnvioXPeso::getMonto() const
 {
-    this->monto = getMontoFijo() + (peso  * 50);
-    return this->monto;
+    return this->montoFijo + (peso  * 1);
 }
-std::ostream& operator<<(std::ostream& os, const EnvioXPeso& dt)
-{
-    os << "Codigo "<< dt.getCodigo() << " Monto " << dt.monto;
-    return os;
-}
+
+

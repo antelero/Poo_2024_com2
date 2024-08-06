@@ -2,19 +2,21 @@
 #define ENVIOCOMUN_H
 #include <iostream>
 
-#include "envio.h"
+#include <string.h>
 
 //Envíos comunes, los cuales tienen un monto fijo.
 
-class EnvioComun : public Envio
+class EnvioComun
 {
-private:
-
-    double monto = 0;
+protected:
+   char * codigo;
+   double montoFijo;
 public:
     EnvioComun(char * codigo, double montoFijo);
-    double getMonto();
+    virtual double getMonto() const;
+    //virtual double getMonto();
     friend std::ostream& operator<<(std::ostream& os, const EnvioComun& dt);
+    char *getCodigo() const;
 };
 
 #endif // ENVIOCOMUN_H

@@ -1,17 +1,26 @@
 #include "enviocomun.h"
+#include <cstring>
 
-EnvioComun::EnvioComun(char * codigo, double montoFijo): Envio (codigo, montoFijo)
+
+char *EnvioComun::getCodigo() const
 {
-
+    return codigo;
 }
 
-double EnvioComun::getMonto()
+EnvioComun::EnvioComun(char * cod, double montoFijo)
 {
-    this->monto = this->getMontoFijo();
-    return this->monto;
+    this->codigo = new char[strlen(cod) + 1];
+    strcpy(this->codigo, cod);
+    this->montoFijo = montoFijo;
+}
+
+double EnvioComun::getMonto() const
+{
+
+    return this->montoFijo;
 }
 std::ostream& operator<<(std::ostream& os, const EnvioComun& dt)
 {
-    os << "Codigo "<< dt.getCodigo() << " Monto " << dt.monto;
+    os << "Codigo "<< dt.codigo << " Monto " << dt.getMonto()<< std::endl;
     return os;
 }

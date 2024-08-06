@@ -5,7 +5,7 @@ Gestor::Gestor()
 
 }
 
-void Gestor::addEnvio(Envio *env)
+void Gestor::addEnvio(EnvioComun *env)
 {
     if (this->cantidad<30)
     {
@@ -19,7 +19,7 @@ int Gestor::getCantidad() const
     return this->cantidad;
 }
 
-Envio *Gestor::getEnvio(int pos)
+EnvioComun *Gestor::getEnvio(int pos)
 {
     return this->envios[pos];
 }

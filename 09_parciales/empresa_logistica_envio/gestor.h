@@ -1,20 +1,20 @@
 #ifndef GESTOR_H
 #define GESTOR_H
 
-#include <envio.h>
+#include <enviocomun.h>
 
 class Gestor
 {
 private:
-    Envio * envios[30];
+    EnvioComun * envios[30];
     int cantidad=0;
 
 public:
     Gestor();
 
-    void addEnvio(Envio *env);
+    void addEnvio(EnvioComun *env);
     int getCantidad() const;
-    Envio *getEnvio(int pos);
+    EnvioComun *getEnvio(int pos);
 };
 
 #endif // GESTOR_H

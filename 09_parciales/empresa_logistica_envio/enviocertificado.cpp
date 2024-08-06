@@ -1,20 +1,16 @@
 #include "enviocertificado.h"
 
-EnvioCertificado::EnvioCertificado(char * codigo, double montoFijo, int km): Envio (codigo,montoFijo)
+EnvioCertificado::EnvioCertificado(char * codigo, double montoFijo, int km): EnvioComun (codigo,montoFijo)
 {
     this->km = km;
 }
 
 
 
-double EnvioCertificado::getMonto()
+double EnvioCertificado::getMonto() const
 {
-    this->monto  = getMontoFijo() + (km  * 10);
-    return this->monto;
+    return this->montoFijo  + (this->km  * 10);
 }
 
-std::ostream& operator<<(std::ostream& os, const EnvioCertificado& dt)
-{
-    os << "Codigo "<< dt.getCodigo() << " Monto " << dt.monto;
-    return os;
-}
+
+

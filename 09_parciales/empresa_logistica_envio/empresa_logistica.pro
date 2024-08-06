@@ -4,7 +4,6 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        envio.cpp \
         enviocertificado.cpp \
         enviocomun.cpp \
         envioxpeso.cpp \
@@ -12,7 +11,6 @@ SOURCES += \
         main.cpp
 
 HEADERS += \
-    envio.h \
     enviocertificado.h \
     enviocomun.h \
     envioxpeso.h \
